@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 # import statsmodel.api as sm
 
 
@@ -22,22 +23,18 @@ def analyze_pk_data(csv_file):
   #  print the cmax and tmax line from csv
   print(f"Cmax: {cmax} ug/mL on line {cmax_row}  and tmax: {tmax} hr(s) on line {tmax_row}")
   # visulization
-  # plt.figure(figsize=(10, 5))
-  # plt.plot(pk_data['Time'], pk_data['Conc'], marker='o', linestyle='-')
-  # plt.title('Concentration-Time Profile Mentorship')
-  # plt.xlabel('Time (hr)')
-  # plt.ylabel('Concentration (ug/mL)')
-  # plt.grid(True)
-  # plt.show()
+  plt.figure(figsize=(10, 5))
+  plt.plot(pk_data['Time'], pk_data['Conc'], marker='o', linestyle='-')
+  plt.title('Concentration-Time Profile Mentorship')
+  plt.xlabel('Time (hr)')
+  plt.ylabel('Concentration (ug/mL)')
+  plt.grid(True)
+  plt.show()
 
   # assignment analysis
 
-
-
-
-
-
-
-
 if __name__ == "__main__":
-  analyze_pk_data("pk_data.csv")
+  file_directory = os.path.dirname(os.path.abspath(__file__))
+  print(file_directory)
+  csv_file = file_directory + "/pk_data.csv"
+  analyze_pk_data(csv_file)
