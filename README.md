@@ -1,4 +1,4 @@
-### Mentoring Session on Python for a Student interested in using Data Analytics for a Computational Pharmacist
+### Python Mentoring for a Student interested in using Data Analytics for a Computational Pharmacist
 
 #### Description
 The tutorials are project based and attempt to get real code done with each session.
