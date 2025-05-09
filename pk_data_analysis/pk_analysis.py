@@ -34,7 +34,7 @@ def analyze_pk_data(csv_file):
   # assignment analysis
 
 if __name__ == "__main__":
-  file_directory = os.path.dirname(os.path.abspath(__file__))
-  print(file_directory)
-  csv_file = file_directory + "/pk_data.csv"
+  # get the root of the project
+  root_directory = os.path.abspath(os.curdir)
+  csv_file = root_directory + "/pk_data.csv"
   analyze_pk_data(csv_file)
