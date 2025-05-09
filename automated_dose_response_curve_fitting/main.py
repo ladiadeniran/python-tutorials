@@ -31,6 +31,6 @@ def four_param_logistic(x, lower_limit, upper_limit, ec50, hill_slope):
 
 
 if __name__ == "__main__":
-  file_directory = os.path.dirname(os.path.abspath(__file__))
-  csv_file = file_directory + "/pk_data.csv"
+  root_directory = os.path.abspath(os.curdir)
+  csv_file = root_directory + "/pk_data.csv"
   run(csv_file)
